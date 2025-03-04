@@ -1,4 +1,4 @@
-package main
+package lists
 
 import "fmt"
 
@@ -73,4 +73,18 @@ func main() {
 	}
 	products = append(products, newProduct)
 	fmt.Println(products)
+
+	// Unpacking list values
+	pricesList := []float64{10.99, 8.99}
+	fmt.Println(pricesList[0:1])
+	pricesList[1] = 9.99
+
+	pricesList = append(pricesList, 5.00, 20.99, 78.9, 98.9)
+	pricesList = pricesList[1:]
+	fmt.Println(prices)
+
+	discountedPrices := []float64{101.99, 79.2, 11.5}
+	pricesList = append(pricesList, discountedPrices...)
+	fmt.Println(pricesList)
+
 }
